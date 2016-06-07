@@ -1,0 +1,154 @@
+/********************************************
+	Tag Resets
+********************************************/
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/********************************************
+	Normalize CSS
+	http://necolas.github.com/normalize.css/
+********************************************/
+
+html {
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	font-size: 100%;
+	line-height: 1;
+}
+
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body, html {
+	/* important */
+	height: 100%;
+}
+
+html {
+	line-height: 1;
+}
+
+body {
+	font-family: 'Lato', Arial, Geneva, sans-serif;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	}
+
+
+
+h1 {
+    color: red;
+}
+
+p {
+    background-color: DeepSkyBlue;
+    }
+
+.parent {
+    width: 100%;
+    height: 500px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: lightcoral;
+    padding: 15px;
+    }
+
+.item {
+    background-color: BlueViolet;
+    padding: 5px;
+    height: 110px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    line-height: 50px;
+    }
+
+
+/***flex box****/
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.item {
+    width: 100%;
+    margin: 0 0 5px 0;
+    }
+
+/* ******************************************
+    Media Queries
+****************************************** */
+
+@media only screen and (min-width: 600px) {
+    .item {
+        width: 100%;
+        }
+    }
+
+
+
+@media only screen and (min-width: 960px) {
+    .item {
+        width: 33.333%;
+        }
+}
+
+@media only screen and (min-width: 1280px) {
+    .item {
+        width: 25%;
+        }
+}
+
+@media only screen and (min-width: 1920px) {
+    .item {
+        width: 20%;
+        }
+
+}
+
