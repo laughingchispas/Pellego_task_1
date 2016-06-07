@@ -84,9 +84,7 @@ h1 {
     color: red;
 }
 
-p {
-    background-color: DeepSkyBlue;
-    }
+
 
 .parent {
     width: 100%;
@@ -98,9 +96,6 @@ p {
     }
 
 .item {
-    background-color: BlueViolet;
-    padding: 5px;
-    height: 110px;
     color: white;
     text-align: center;
     font-weight: 600;
@@ -115,10 +110,15 @@ p {
     flex-wrap: wrap;
 }
 
-
 .item {
     width: 100%;
-    margin: 0 0 5px 0;
+    }
+
+.inner_item {
+    margin: 5px;
+    background-color: DeepSkyBlue;
+    height: 300px;
+    box-shadow: 2px 2px 1px #888888;
     }
 
 /* ******************************************
@@ -127,7 +127,13 @@ p {
 
 @media only screen and (min-width: 600px) {
     .item {
-        width: 100%;
+        width: 50%;
+        }
+
+    .inner_item {
+        margin: 5px;
+        background-color: DeepSkyBlue;
+        height: 400px;
         }
     }
 
