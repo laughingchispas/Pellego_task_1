@@ -72,12 +72,6 @@ html {
 	line-height: 1;
 }
 
-body {
-	font-family: 'Lato', Arial, Geneva, sans-serif;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	}
-
 h1 {
     color: #59C1A4;
     margin: 20px;
@@ -99,7 +93,32 @@ h1 {
     line-height: 50px;
 }
 
+/***header***/
 
+.header_image {
+    float: left;
+    width: 40px;
+    background-color: steelBlue;
+    flex-basis: auto;
+    }
+
+.header_secondary_container {
+    float:right;
+    display: flex;
+    background-color: tomato;
+    width: 90%;
+    }
+
+.header_center {
+    background-color: coral;
+    }
+
+.header_right {
+    background-color: mediumOrchid;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 0 0;
+    }
 
 /***flex box****/
 .parent {
@@ -108,7 +127,7 @@ h1 {
 }
 
 .item {
-    width: 100%;
+    flex-basis: 100%;
 }
 
 .inner_item {
@@ -128,7 +147,7 @@ p {
 
 @media only screen and (min-width: 600px) {
     .item {
-        width: 50%;
+        flex-basis: 50%;
     }
     .inner_item {
         height: 400px;
@@ -136,20 +155,37 @@ p {
 }
 
 @media only screen and (min-width: 960px) {
+    .header_center {
+        flex-basis: 50%;
+        }
+
+    .header_right {
+        background-color: mediumOrchid;
+        flex-basis: 50%;
+        }
+
     .item {
-        width: 33.333%;
+        flex-basis: 33.333%;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .item {
-        width: 25%;
+        flex-basis: 25%;
     }
 }
 
 @media only screen and (min-width: 1920px) {
+    .header_center {
+        flex-basis: 66.6667%;
+        }
+
+    .header_right {
+        flex-basis: 33.3333%;
+        }
+
     .item {
-        width: 20%;
+        flex-basis: 20%;
     }
 }
 
