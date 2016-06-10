@@ -97,10 +97,11 @@ h1 {
 
 .header_main_container {
     display: flex;
-    justify-content: space-between;}
+    justify-content: space-between;
+    }
 
 .header_image {
-    width: 40px;
+    flex: 0 0 400px;
     background-color: steelBlue;
     flex-basis: auto;
     }
@@ -108,13 +109,13 @@ h1 {
 .header_secondary_container {
     display: flex;
     background-color: tomato;
-    width: 90%;
     justify-content: flex-end;
+    flex: 1 1 auto;
     }
 
 .header_center {
     background-color: coral;
-    flex-basis: content;
+    flex-basis: 1 1 auto;
     }
 
 .header_right {
@@ -122,7 +123,7 @@ h1 {
     display: flex;
     justify-content: space-around;
     margin: 20px 0 0 0;
-    flex-basis: 30%;
+    flex: 1 1 150px;
     }
 
 /***flex box****/
@@ -160,13 +161,17 @@ p {
 }
 
 @media only screen and (min-width: 960px) {
+    .header_secondary_container {
+        flex: 1 1 auto;
+        }
+
     .header_center {
-        flex-basis: 50%;
+        flex: 1 1 50%;
         }
 
     .header_right {
         background-color: mediumOrchid;
-        flex-basis: 50%;
+        flex: 1 1 50%;
         }
 
     .item {
@@ -182,11 +187,11 @@ p {
 
 @media only screen and (min-width: 1920px) {
     .header_center {
-        flex-basis: 66.6667%;
+        flex: 2 2 0;
         }
 
     .header_right {
-        flex-basis: 33.3333%;
+        flex: 1 1 0;
         }
 
     .item {
