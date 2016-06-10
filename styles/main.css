@@ -106,16 +106,11 @@ h1 {
     flex-basis: auto;
     }
 
-.header_secondary_container {
-    display: flex;
-    background-color: tomato;
-    justify-content: flex-end;
-    flex: 1 1 auto;
-    }
 
 .header_center {
     background-color: coral;
     flex-basis: 1 1 auto;
+    display: none;
     }
 
 .header_right {
@@ -158,20 +153,21 @@ p {
     .inner_item {
         height: 400px;
     }
+
+    .header_center {
+        display: inline;
+        }
 }
 
 @media only screen and (min-width: 960px) {
-    .header_secondary_container {
-        flex: 1 1 auto;
-        }
 
     .header_center {
-        flex: 1 1 50%;
+        flex: 1 1 0;
         }
 
     .header_right {
         background-color: mediumOrchid;
-        flex: 1 1 50%;
+        flex: 1 1 0;
         }
 
     .item {
