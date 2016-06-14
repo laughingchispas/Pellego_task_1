@@ -24,21 +24,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.489796" vertical-offset="15" max-vertical-offset="1335">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5031546" vertical-offset="251" max-vertical-offset="1530">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75829387" vertical-offset="1890" max-vertical-offset="3045">
-              <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2072" max-vertical-offset="3090">
+              <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angularApp.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/angularApp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+              <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -49,8 +69,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/angular.js" />
+        <option value="$PROJECT_DIR$/scripts/angularApp.js" />
         <option value="$PROJECT_DIR$/styles/main.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -111,6 +133,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="FullScreen" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -119,6 +142,10 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -229,18 +256,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.489796" vertical-offset="15" max-vertical-offset="1335">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75829387" vertical-offset="1890" max-vertical-offset="3045">
-          <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2072" max-vertical-offset="3090">
+          <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/angularApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5031546" vertical-offset="251" max-vertical-offset="1530">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>

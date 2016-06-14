@@ -142,6 +142,10 @@ p {
     background-color: #59C1A4
 }
 
+.red {
+    background-color: black;
+    }
+
 /* ******************************************
     Media Queries
 ****************************************** */
@@ -151,7 +155,7 @@ p {
         flex-basis: 50%;
     }
     .inner_item {
-        height: 400px;
+        height: 300px;
     }
 
     .header_center {
@@ -194,4 +198,3 @@ p {
         flex-basis: 20%;
     }
 }
-

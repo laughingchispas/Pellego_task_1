@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css"/>
 
     <script src="scripts/angular.min.js"></script>
-
+    <script src="scripts/angularApp.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
 <body>
@@ -19,10 +20,11 @@
         <div class="header_image">
             <img src="images/pellego.png">
         </div>
+        <div class="header_center">
+            <h1> i'm going to be a fancy flex box </h1>
+        </div>
 
-            <div class="header_center">
-                <h1> i'm going to be a fancy flex box </h1>
-            </div>
+        <div ng-controller="mainController">
             <div class="header_right">
                 <a href="https://www.google.be">1</a>
                 <a href="https://www.google.be">1</a>
@@ -30,53 +32,64 @@
                 <a href="https://www.google.be">1</a>
                 <a href="https://www.google.be">1</a>
             </div>
-
+        </div>
     </div>
 
 </header>
 
 <div class="parent">
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
+    <div ng-app="angularApp" ng-controller="card_controller" class="item">
+        <div ng-repeat="card in movieCards | orderBy:'movieTitle'" class="inner_item">
+            <p>{{card.movieTitle}}</p>
+            <p class="red">{{card.movieDirector}}</p>
         </div>
     </div>
 </div>
+
+
+<!--
+<div class="parent">
+    <div class="item">
+        <div class ="inner_item">
+            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
+        </div>
+    </div>
+    <div class="item ">
+        <div class ="inner_item">
+            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
+        </div>
+    </div>
+    <div class="item ">
+        <div class ="inner_item">
+            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
+        </div>
+    </div>
+    <div class="item ">
+        <div class ="inner_item">
+            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
+        </div>
+    </div>
+    <div class="item ">
+        <div class ="inner_item">
+            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
+        </div>
+    </div>
+    <div class="item ">
+        <div class ="inner_item">
+            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
+        </div>
+    </div>
+    <div class="item ">
+        <div class ="inner_item">
+            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
+        </div>
+    </div>
+    <div class="item ">
+        <div class ="inner_item">
+            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
+        </div>
+    </div>
+</div> -->
 
 <script src="scripts/angular.min.js"></script>
 
