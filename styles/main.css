@@ -108,13 +108,13 @@ h1 {
 
 
 .header_center {
-    background-color: coral;
+    background-color: black;
     flex-basis: 1 1 auto;
     display: none;
     }
 
 .header_right {
-    background-color: mediumOrchid;
+    background-color: #59C1A4;
     display: flex;
     justify-content: space-around;
     margin: 20px 0 0 0;
@@ -142,7 +142,7 @@ p {
     background-color: #59C1A4
 }
 
-.red {
+.director {
     background-color: black;
     }
 
@@ -170,7 +170,6 @@ p {
         }
 
     .header_right {
-        background-color: mediumOrchid;
         flex: 1 1 0;
         }
 
