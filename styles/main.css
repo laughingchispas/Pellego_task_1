@@ -93,6 +93,38 @@ h1 {
     line-height: 50px;
 }
 
+
+.remove {
+    margin: 20px 20px 0 20px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.removal {
+    margin: 0 15px 0 0;
+    color: black;
+    }
+
+.xButton {
+    margin: 7px 0 0 0;
+    }
+
+
+.button {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    float: right;
+    margin: 10px;
+    border-radius: 20px;
+    border-width: .5px;
+    }
+
+.title {
+    float: left;
+    margin: 10px;
+    }
 /***header***/
 
 .header_main_container {
@@ -114,11 +146,22 @@ h1 {
     }
 
 .header_right {
-    background-color: #59C1A4;
+    background-color: #f1f1f1;
     display: flex;
     justify-content: space-around;
     margin: 20px 0 0 0;
-    flex: 1 1 150px;
+    flex: 1 1 100px;
+    }
+
+a {
+    color: green;
+    max-width: 30px;
+    text-decoration: none;
+    }
+
+.navLinks {
+    width: 40px;
+    background-color: red;
     }
 
 /***flex box****/

@@ -13,34 +13,51 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 
-<body ng-controller="CardController">
+<body>
 
 <header>
-    <div class="header_main_container">
+    <div class="header_main_container" ng-controller="navController">
         <div class="header_image">
             <img src="images/pellego.png">
         </div>
         <div class="header_center">
             <h1> movie collection </h1>
         </div>
-        <div class="header_right">
-            <a href="#">1</a>
-            <a href="#">1</a>
-            <a href="#">1</a>
-            <a href="#">1</a>
-            <a href="#">1</a>
+        <div class="header_right" ng-repeat="card in navCards">
+            <div class="navLinks">
+                <a href="#">{{card.page}}</a>
+            </div>
         </div>
     </div>
 
 </header>
 
-<div class="parent">
-    <div class="item" ng-repeat="card in movieCards | orderBy:'movieTitle'">
+<div class="parent" ng-controller="CardController">
+    <div class="item" ng-repeat="card in movieCards">
         <div class="inner_item" >
-            <p>Movie: {{card.movieTitle}}</p>
-            <p class="director">Director: {{card.movieDirector}}</p>
+            <p>Movie: {{card.title}}</p>
+            <p class="director">Director: {{card.director}}</p>
+            <p>Genre: {{card.genre}}</p>
+            <div class="remove">
+                <div class="removal">
+                    remove card
+                </div>
+                <div class="xButton">
+                    <img src="images/xButton.png">
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+
+<div ng-controller="GenreController">
+    <h2 class="title">
+        select genre
+    </h2>
+    <button class="button" ng-repeat="card in genreCards">
+        {{card.genre}}
+    </button>
 </div>
 
 
