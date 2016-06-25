@@ -1,7 +1,6 @@
 var myApp = angular.module('angularApp', []);
 
 
-
 myApp.controller('navController', function($scope) {
     $scope.navCards = [
             {page: "home"},

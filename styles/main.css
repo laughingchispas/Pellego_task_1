@@ -98,7 +98,6 @@ h1 {
     margin: 20px 20px 0 20px;
     display: flex;
     justify-content: flex-end;
-
 }
 
 .removal {
@@ -153,16 +152,21 @@ h1 {
     flex: 1 1 100px;
     }
 
-a {
+.navLink {
+    color: orange;
+    }
+
+.navLinks {
+    width: 40px;
+    color: green;
+    }
+
+a:link {
     color: green;
     max-width: 30px;
     text-decoration: none;
     }
 
-.navLinks {
-    width: 40px;
-    background-color: red;
-    }
 
 /***flex box****/
 .parent {
@@ -188,6 +192,18 @@ p {
 .director {
     background-color: black;
     }
+
+
+.removeButton {
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-width: .5px;
+    border-color: black;
+    border-radius: 15px;
+    float: right;
+    margin: 50px 20px 20px 20px;
+}
 
 /* ******************************************
     Media Queries

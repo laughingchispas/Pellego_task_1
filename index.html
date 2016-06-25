@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="styles/main.css"/>
 
+    <script src="scripts/main.js"></script>
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/angularApp.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -23,21 +24,22 @@
         <div class="header_center">
             <h1> movie collection </h1>
         </div>
-        <div class="header_right" ng-repeat="card in navCards">
-            <div class="navLinks">
-                <a href="#">{{card.page}}</a>
+        <div class="header_right">
+            <div class="navLinks" ng-repeat="card in navCards">
+                <a href="#" class="navLink">{{card.page}}</a>
             </div>
         </div>
     </div>
 
 </header>
 
-<div class="parent" ng-controller="CardController">
-    <div class="item" ng-repeat="card in movieCards">
+<div class="parent" ng-controller="CardController" >
+    <div class="item" ng-repeat="card in movieCards" id="card">
         <div class="inner_item" >
             <p>Movie: {{card.title}}</p>
             <p class="director">Director: {{card.director}}</p>
             <p>Genre: {{card.genre}}</p>
+            <!--
             <div class="remove">
                 <div class="removal">
                     remove card
@@ -45,11 +47,13 @@
                 <div class="xButton">
                     <img src="images/xButton.png">
                 </div>
-            </div>
+            </div> -->
+            <form>
+                <input class="removeButton" type="submit" value="remove card"" onclick="removeCard(); "/>
+            </form>
         </div>
     </div>
 </div>
-
 
 <div ng-controller="GenreController">
     <h2 class="title">
@@ -59,51 +63,6 @@
         {{card.genre}}
     </button>
 </div>
-
-
-<!--
-<div class="parent">
-    <div class="item">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-    <div class="item ">
-        <div class ="inner_item">
-            <p>Vel persius labitur ornatus ad, ipsum tamquam reprimique in mei.  </p>
-        </div>
-    </div>
-</div> -->
 
 <script src="scripts/angular.min.js"></script>
 
