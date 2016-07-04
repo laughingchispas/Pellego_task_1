@@ -1,18 +1,41 @@
 var myApp = angular.module('angularApp', []);
 
 
-myApp.controller('navController', function($scope) {
-    $scope.navCards = [
-            {page: "home"},
-            {page: "movies"},
-            {page: "about us"},
-            {page: "links"},
-            {page: "contacts"}
-        ]
-    });
-
 myApp.controller('CardController', function($scope) {
-    $scope.movieCards = [
+
+
+    $scope.sortBy = function(anyName) {
+        $scope.sorting = anyName
+        }
+
+
+     $scope.addForm = function(otherName) {
+                $scope.sorting = otherName
+                }
+
+    $scope.removeCard = function(idX) {
+        $scope.movieCards.splice(idX,1)
+        }
+
+
+
+
+
+
+
+
+    $scope.navCards = [
+                {page: "home"},
+                {page: "movies"},
+                {page: "about us"},
+                {page: "links"},
+                {page: "contacts"}
+            ]
+
+
+
+
+    var movies = [
         {title: 'Casablanca', director: 'Curtiz', genre: "drama"},
         {title: 'Citizen Kane', director: 'Welles', genre: "adventure"},
         {title: 'Psycho', director: 'Hitchcock', genre: "horror"},
@@ -24,19 +47,45 @@ myApp.controller('CardController', function($scope) {
         {title: 'Godfather', director: 'Coppola', genre: "drama"},
         {title: 'Back to the Future', director: 'Zemeckis', genre: "drama"}
     ]
+
+    $scope.movieCards = movies
+
+
+
+
+
+
+
+
+    var genres = [
+                {genre: "drama"},
+                {genre: "adventure"},
+                {genre: "horror"},
+                {genre: "comedy"},
+                {genre: "science fiction"}
+            ]
+
+    $scope.genreCards = genres
+
+    $scope.edit = function(genre){
+        if(genres.genre==="drama"){
+            return true
+        }
+    }
+
+
+    $scope.names = ["Ben", "Nate", "Austin", "Yiannis", "Matt M", "Matt B"]
+
+
+
+    $scope.fruitCards = fruits
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    function pushFunction() {
+        fruits.push("star fruit");
+        }
+
     });
-
-
-myApp.controller('GenreController', function($scope) {
-    $scope.genreCards = [
-            {genre: "drama"},
-            {genre: "adventure"},
-            {genre: "horror"},
-            {genre: "comedy"},
-            {genre: "science fiction"}
-        ]
-    });
-
-
 
 

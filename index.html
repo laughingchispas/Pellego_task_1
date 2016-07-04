@@ -8,16 +8,15 @@
 
     <link rel="stylesheet" type="text/css" href="styles/main.css"/>
 
-    <script src="scripts/main.js"></script>
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/angularApp.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="scripts/main.js"></script>
 </head>
 
-<body>
+<body ng-controller="CardController">
 
 <header>
-    <div class="header_main_container" ng-controller="navController">
+    <div class="header_main_container">
         <div class="header_image">
             <img src="images/pellego.png">
         </div>
@@ -33,38 +32,187 @@
 
 </header>
 
-<div class="parent" ng-controller="CardController" >
-    <div class="item" ng-repeat="card in movieCards" id="card">
-        <div class="inner_item" >
-            <p>Movie: {{card.title}}</p>
-            <p class="director">Director: {{card.director}}</p>
-            <p>Genre: {{card.genre}}</p>
-            <!--
-            <div class="remove">
-                <div class="removal">
-                    remove card
+<div class="parent">
+    <div id="card" class="item" ng-repeat="card in movieCards | orderBy: sorting" ng-hide="checked">
+
+        <!--using this 'checked status, I am able to make the cards hide one by one...obviously then the bock doesn't check then-->
+
+
+        <div class="inner_item">
+            <div class="movie_content">
+                <p>Movie{{$index + 1}} : {{card.title}}</p>
+                <p class="director">Director: {{card.director}}</p>
+                <p>Genre: {{card.genre}}</p>
+            </div>
+            <div class="removeBox"></div>
+                <div class="removeButton">
+                    <img ng-click="removeCard($index)" src="images/xButton.png">
                 </div>
-                <div class="xButton">
-                    <img src="images/xButton.png">
+                <div class="removeText">
+                        remove card
                 </div>
-            </div> -->
-            <form>
-                <input class="removeButton" type="submit" value="remove card"" onclick="removeCard(); "/>
-            </form>
+            </div>
+        <div>
+            <p> hide this card: </p> <input type="checkbox" ng-model="checked"><br/>
+
+            <!--this is what I am using for the checking of the box--- there is probably a much better way to to do this-->
+
+
         </div>
     </div>
 </div>
 
-<div ng-controller="GenreController">
+
+<div>
     <h2 class="title">
-        select genre
+        sort by genre
     </h2>
-    <button class="button" ng-repeat="card in genreCards">
-        {{card.genre}}
+    <button class="button" ng-click="sortBy('director')">
+        director
+    </button>
+    <button class="button" ng-click="sortBy('title')">
+       title
+    </button>
+    <button class="button" ng-click="sortBy('genre')">
+       genre
     </button>
 </div>
 
+
+
+
+<!-- attempt to push an item to an array - but unable to even display array using ng-repeat -->
+<!-- again, why would I use card here? is there a better term to use?-->
+<!-- here, trying to understand semantics purely...-->
+
+
+<ul>
+    <li ng-repeat=”name in names”>{{name}}</li>
+</ul>
+<p> hello </p>
+
+
+<!-- trying to do a basic push onclick to the array here but I can't even get the array above working....semantic issues.
+<div class="pushArray" ng-repeat="text in fruitCards">
+    <p>add a new fruit</p>
+    <button onclick="pushFunction()">Push fruit</button>
+</div>  -->
+
+
+
+<!--- attempt to display all cards but one -->
+<!-- wanting to format this so that it doesn't float to the left using css but it won't seem to apply to this div below- also color properties aren't seeming to apply-->
+
+
+<div id="genreSorter" ng-repeat="card in genreCards" ng-hide="edit(genres)">
+    <p>{{card.genre}}</p>
+</div>
+
+
+
+
+
+<!--
+
+<div ng-controller="ListController">
+    <ul class="categories" ng-controller="CategoryController">
+
+    </ul>
+</div>
+
+<div class="tabs" ng-controller="tabsController">
+    <ul>
+        <li ng-click="tab(1)">
+            Recent items
+        </li>
+        <li ng-click="tab(2)">
+            Popular items
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="left" ng-controller="ItemController">
+        <div class="itemList">
+            <div class="item" ng-repeat="item in items | filter:search | orderBy: sort">
+                <h3 ng-click="viewDetail(item)">
+                    {{item.title}} - {{item.date}}
+                </h3>
+                <p>
+                    {{item.description}}
+                </p>
+                <a ng-click="viewDetail(item)">View full item details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="scripts/angular.min.js"></script>
+
+<div>
+    <button ng-click="sortBy('director')">
+        director
+    </button>
+    <button ng-click="sortBy('title')">
+       title
+    </button>
+    <button ng-click="sorting = 'genre'">
+       genre
+    </button>
+</div>
+
+Click me for genre: <input type="checkbox" ng-model="checked"><br/>
+Click me for movie: <input type="checkbox" ng-model="movieChecked"><br/>
+<div>
+    Show:
+    <div ng-show="checked">
+        I show up when your checkbox is checked.
+    </div>
+</div>
+<div>
+    Hide:
+    <div ng-hide="checked">
+        I hide when your checkbox is checked.
+    </div>
+</div>
+
+
+<div>
+    Show:
+    <div ng-show="movieChecked">
+        I show up when your checkbox is checked.
+    </div>
+</div>
+<div>
+    Hide:
+    <div ng-hide="movieChecked">
+        I hide when your checkbox is checked.
+    </div>
+</div>
+
+
+
+<div ng-show="true">joe</div>
+<div ng-show="3>=2">yo</div>
+
+
+
+
+
+
+
+<div ng-controller="TestController">
+    <form ng-submit="addText(myText)">
+        <input type="text" placeholder="Enter film title" ng-model="myText">
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        <li ng-repeat="text in arrayText">{{ text }}</li>
+    </ul>
+</div>
+
+
+-->
 
 </body>
 </html>
