@@ -8,7 +8,7 @@ myApp.controller('CardController', function($scope) {
         $scope.sorting = anyName
         }
 
-
+//what is this?
      $scope.addForm = function(otherName) {
                 $scope.sorting = otherName
                 }
@@ -16,12 +16,6 @@ myApp.controller('CardController', function($scope) {
     $scope.removeCard = function(idX) {
         $scope.movieCards.splice(idX,1)
         }
-
-
-
-
-
-
 
 
     $scope.navCards = [
@@ -50,11 +44,15 @@ myApp.controller('CardController', function($scope) {
 
     $scope.movieCards = movies
 
-
-
-
-
-
+    $scope.addMovieTitle = function(myTitle) {
+                     $scope.movies.title.push(myTitle);
+                };
+    $scope.addMovieDirector = function(myDirector) {
+                         $scope.movies.director.push(myDirector);
+                    };
+    $scope.addMovieGenre = function(myGenre) {
+                         $scope.movies.genre.push(myGenre);
+                    };
 
 
     var genres = [
@@ -68,23 +66,19 @@ myApp.controller('CardController', function($scope) {
     $scope.genreCards = genres
 
     $scope.edit = function(genre){
-        if(genres.genre==="drama"){
+        if(genres.genre=="drama"){
             return true
         }
     }
 
 
     $scope.names = ["Ben", "Nate", "Austin", "Yiannis", "Matt M", "Matt B"]
+    $scope.addName = function(myName) {
+                 $scope.names.push(myName);
+            };
 
 
 
-    $scope.fruitCards = fruits
-
-    var fruits = ["Banana", "Orange", "Apple", "Mango"];
-
-    function pushFunction() {
-        fruits.push("star fruit");
-        }
 
     });
 

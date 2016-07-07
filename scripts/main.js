@@ -1,18 +1,30 @@
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementByID("demo").innerHTML = fruits;
 
-var app= angular.module('app', []);
 
-app.controller('TestController', function($scope) {
-        this.arrayText = [{
-          text1: 'Hello',
-          text2: 'world',
-        }];
+var carName = "Volvo";
+document.getElementById("demo").innerHTML = carName;
 
-        this.addText = function(text) {
-          this.arrayText.push(text);
-        }
-        this.form = {
-          text1: '',
-          text2: ''
-        }
-});
+
+
+    //function pushFunction() {
+      //      fruits.push("star fruit");
+        //    }
+
+//var app= angular.module('app', []);
+
+//app.controller('TestController', function($scope) {
+        //this.arrayText = [{
+          //text1: 'Hello',
+          //text2: 'world',
+        //}];
+
+        //this.addText = function(text) {
+          //this.arrayText.push(text);
+        //}
+        //this.form = {
+          //text1: '',
+          //text2: ''
+        //}
+//});
 
