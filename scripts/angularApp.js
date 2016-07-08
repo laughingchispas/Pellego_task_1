@@ -30,7 +30,7 @@ myApp.controller('CardController', function($scope) {
 
 
     var movies = [
-        {title: 'Casablanca', director: 'Curtiz', genre: "drama"},
+        {title: 'Casablanca', director: 'Curtiz', genre: ['drama', 'action']},
         {title: 'Citizen Kane', director: 'Welles', genre: "adventure"},
         {title: 'Psycho', director: 'Hitchcock', genre: "horror"},
         {title: 'Godfather', director: 'Coppola', genre: "comedy"},
@@ -65,11 +65,12 @@ myApp.controller('CardController', function($scope) {
 
     $scope.genreCards = genres
 
-    $scope.edit = function(genre){
-        if(genres.genre=="drama"){
+    $scope.sortComedy = function(genre){
+        if(genre.genre === "comedy"){
             return true
         }
     }
+
 
 
     $scope.names = ["Ben", "Nate", "Austin", "Yiannis", "Matt M", "Matt B"]
@@ -77,7 +78,13 @@ myApp.controller('CardController', function($scope) {
                  $scope.names.push(myName);
             };
 
+    var employees = [
+        {name: 'bob', gender: 'male', city: 'chicago', salary: '$5'},
+        {name: 'mary', gender: 'female', city: 'london', salary: '$5.5'},
+        {name: 'jill', gender: 'female', city: 'new york', salary: '$10'},
+        ]
 
+    $scope.employees = employees
 
 
     });
