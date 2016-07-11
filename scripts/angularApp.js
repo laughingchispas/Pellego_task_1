@@ -3,90 +3,87 @@ var myApp = angular.module('angularApp', []);
 
 myApp.controller('CardController', function($scope) {
 
-
+//sorting function
     $scope.sortBy = function(anyName) {
         $scope.sorting = anyName
-        }
+        };
 
-//what is this?
+
+//what is this????????????
      $scope.addForm = function(otherName) {
                 $scope.sorting = otherName
-                }
-
-    $scope.removeCard = function(idX) {
-        $scope.movieCards.splice(idX,1)
-        }
-
-
-    $scope.navCards = [
-                {page: "home"},
-                {page: "movies"},
-                {page: "about us"},
-                {page: "links"},
-                {page: "contacts"}
-            ]
-
-
-
-
-    var movies = [
-        {title: 'Casablanca', director: 'Curtiz', genre: ['drama', 'action']},
-        {title: 'Citizen Kane', director: 'Welles', genre: "adventure"},
-        {title: 'Psycho', director: 'Hitchcock', genre: "horror"},
-        {title: 'Godfather', director: 'Coppola', genre: "comedy"},
-        {title: 'Back to the Future', director: 'Zemeckis', genre: "science fiction"},
-        {title: 'Casablanca', director: 'Curtiz', genre: "drama"},
-        {title: 'Citizen Kane', director: 'Welles', genre: "drama"},
-        {title: 'Psycho', director: 'Hitchcock', genre: "drama"},
-        {title: 'Godfather', director: 'Coppola', genre: "drama"},
-        {title: 'Back to the Future', director: 'Zemeckis', genre: "drama"}
-    ]
-
-    $scope.movieCards = movies
-
-    $scope.addMovieTitle = function(myTitle) {
-                     $scope.movies.title.push(myTitle);
                 };
-    $scope.addMovieDirector = function(myDirector) {
-                         $scope.movies.director.push(myDirector);
-                    };
-    $scope.addMovieGenre = function(myGenre) {
-                         $scope.movies.genre.push(myGenre);
-                    };
 
-
-    var genres = [
-                {genre: "drama"},
-                {genre: "adventure"},
-                {genre: "horror"},
-                {genre: "comedy"},
-                {genre: "science fiction"}
-            ]
-
-    $scope.genreCards = genres
-
-    $scope.sortComedy = function(genre){
-        if(genre.genre === "comedy"){
-            return true
-        }
-    }
+//remove card 'permanently' until reload
+    $scope.removeCard = function(idX) {
+        $scope.movieCards.splice(idX,1)  //splice (or remove) at the the card's posiiton for ONE care (idX, 1 = 1card)
+        };
 
 
 
-    $scope.names = ["Ben", "Nate", "Austin", "Yiannis", "Matt M", "Matt B"]
-    $scope.addName = function(myName) {
-                 $scope.names.push(myName);
-            };
+//navigation link content
+    $scope.navCards = [
+                {page: 'home'},
+                {page: 'movies'},
+                {page: 'about us'},
+                {page: 'links'},
+                {page: 'contact'}
+    ];
 
-    var employees = [
-        {name: 'bob', gender: 'male', city: 'chicago', salary: '$5'},
-        {name: 'mary', gender: 'female', city: 'london', salary: '$5.5'},
-        {name: 'jill', gender: 'female', city: 'new york', salary: '$10'},
-        ]
+//movie card content
+    $scope.movieCards = [
+            {title: 'Casablanca', director: 'Curtiz', genre: ['drama', 'adventure']},
+            {title: 'Citizen Kane', director: 'Welles', genre: ['adventure']},
+            {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
+            {title: 'Godfather', director: 'Coppola', genre: ['comedy']},
+            {title: 'Back to the Future', director: 'Zemeckis', genre: ['science fiction']},
+            {title: 'Casablanca', director: 'Curtiz', genre: ['drama']},
+            {title: 'Citizen Kane', director: 'Welles', genre: ['drama']},
+            {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
+            {title: 'Godfather', director: 'Coppola', genre: ['drama']},
+            {title: 'Back to the Future', director: 'Zemeckis', genre: ['drama']}
+    ];
 
-    $scope.employees = employees
+
+// hide all movie cards
+    $scope.showAllMovies = function() {
+        angular.forEach($scope.movieCards, function(movie) {  //shuffle through all the .movieCards
+        movie.hidden = false;  //**movie variable just for inside this function
+        })
+    };
+
+
+    $scope.newMovie = {    //empty movie object
+    };
+
+    $scope.addNewMovie = function() {
+                     $scope.movieCards.push($scope.newMovie);   //pushing the empty movie object onto movieCards
+                     $scope.newMovie = {};     //leaving the form empty by emptying the newMovie object on the view
+                };
+
+
+//genre names for later sorting
+    $scope.genreCards =[
+                   {name: 'drama'},
+                   {name: 'adventure'},
+                   {name: 'horror'},
+                   {name: 'comedy'},
+                   {name: 'science fiction'}
+    ];
+
+
+//sorting for strings - only showing genres determined by the button
+//!!! now that strings have been turned into arrays - this function no longer works!
+    $scope.showGenreMovies = function(genre_name) {      //genre_name is a variable within this function
+        angular.forEach($scope.movieCards, function(movie) {   //loops through movieCards, movie is also a var. in this function
+                    if (movie.genre === genre_name){    //checking if the the string is the same as the genre name
+                       movie.hidden = false;   //hide becomes false if they are the same
+                    }
+                    else {
+                        movie.hidden = true;  //hide is true if they are different
+                    }
+                })
+    };
 
 
     });
-
-

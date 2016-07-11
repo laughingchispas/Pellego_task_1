@@ -18,27 +18,37 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/index.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="1.159306" vertical-offset="645" max-vertical-offset="3690">
+                    <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Pellego_task_1" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44481054" vertical-offset="300" max-vertical-offset="4410">
-              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-35.555557" vertical-offset="2220" max-vertical-offset="4080">
-              <caret line="212" column="18" selection-start-line="212" selection-start-column="18" selection-end-line="212" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.8082409" vertical-offset="2220" max-vertical-offset="4080">
+              <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -47,8 +57,8 @@
       <file leaf-file-name="angularApp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/angularApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="1470">
-              <caret line="41" column="75" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
+            <state vertical-scroll-proportion="-1.8888888" vertical-offset="0" max-vertical-offset="1598">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,9 +71,9 @@
       <list>
         <option value="$PROJECT_DIR$/angular.js" />
         <option value="$PROJECT_DIR$/scripts/main.js" />
-        <option value="$PROJECT_DIR$/scripts/angularApp.js" />
         <option value="$PROJECT_DIR$/styles/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/scripts/angularApp.js" />
       </list>
     </option>
   </component>
@@ -336,24 +346,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/angularApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="1470">
-          <caret line="41" column="75" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
+        <state vertical-scroll-proportion="-1.8888888" vertical-offset="0" max-vertical-offset="1598">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-35.555557" vertical-offset="2220" max-vertical-offset="4080">
-          <caret line="212" column="18" selection-start-line="212" selection-start-column="18" selection-end-line="212" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.8082409" vertical-offset="2220" max-vertical-offset="4080">
+          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44481054" vertical-offset="300" max-vertical-offset="4410">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        <state vertical-scroll-proportion="1.159306" vertical-offset="645" max-vertical-offset="3690">
+          <caret line="92" column="10" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
           <folding />
         </state>
       </provider>

@@ -33,7 +33,7 @@
 </header>
 
 <div class="parent">
-    <div id="card" class="item" ng-repeat="card in movieCards | orderBy: sorting" ng-hide="checked" ng-show="restoreChecked">
+    <div id="card" class="item" ng-repeat="card in movieCards | orderBy: sorting" ng-hide="card.hidden">
         <div class="inner_item">
             <div class="movie_content">
                 <p>Movie {{ $index + 1}} : {{card.title}}</p>
@@ -41,12 +41,11 @@
                 <p>Genre: {{card.genre}}</p>
             </div>
             <div class="removeBox">
-                <button ng-click="checked=true">Hide Movie Card</button>
+                <button ng-click="card.hidden=true">Hide Movie Card</button>
             </div>
         </div>
     </div>
 </div>
-
 
 
 <br/><br/>
@@ -54,36 +53,23 @@
 <div class="bottomHalf">
 
     <div>
-        <h1>
-            Restore hidden cards
-        </h1>
+        <h2 class="title"> Restore hidden cards</h2>
         <p>
             Click on the "show" link to see all cards.
         </p>
-        <button ng-click="(restoreChecked=true) && (checked=false)">
+        <button ng-click="showAllMovies()">
             Show
         </button>
-        <p>
-            Click on the "hide" link to hide all cards.
-        </p>
-        <button ng-click="(checked=true) && (restoreChecked=false)">
-            Hide
-        </button>
     </div>
 
     <br/><br/>
 
+    <h2 class="title">add a new movie card</h2>
     <div>
-        <form ng-submit="addMovieTitle(myTitle)">
-            <input type="text" placeholder="Enter Title" ng-model="myTitle">
-            <button type="submit">Add</button>
-        </form>
-        <form ng-submit="addMovieDirector(myDirector)">
-            <input type="text" placeholder="Enter Director" ng-model="myDirector">
-            <button type="submit">Add</button>
-        </form>
-        <form ng-submit="addMovieGenre(myGenre)">
-            <input type="text" placeholder="Enter Genre" ng-model="myGenre">
+        <form ng-submit="addNewMovie()">
+            <input type="text" placeholder="Enter Title" ng-model="newMovie.title">
+            <input type="text" placeholder="Enter Title" ng-model="newMovie.director">
+            <input type="text" placeholder="Enter Title" ng-model="newMovie.genre">
             <button type="submit">Add</button>
         </form>
     </div>
@@ -92,10 +78,9 @@
 
     <br/><br/>
 
+<!--- I don't understand how this works --- how it connects to the form function and then how it connects in the correct scope to the movieCards-->
     <div>
-        <h2 class="title">
-            sort by genre
-        </h2>
+        <h2 class="title"> sort by genre </h2>
         <button class="button" ng-click="sortBy('director')">
             director
         </button>
@@ -112,47 +97,14 @@
     <br/><br/><br/><br/>
 
 
-    <div>
-        <form ng-submit="addName(myName)">
-            <input type="text" placeholder="Enter Name" ng-model="myName">
-            <button type="submit">Add</button>
-        </form>
-        <ul>
-            <li ng-repeat="name in names">{{ name }}</li>
-        </ul>
-    </div>
+    <h2 class="title"> show certain genres</h2>
 
-    <br/><br/>
+    <br/>
+    <!--- display only one genre at a time-->
 
-    <input type="checkbox" ng-model="hideSalary"/> hide salary
-    <br/><br/>
-    <table>
-        <thead>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>City</th>
-            <th ng-hide="hideSalary">Salary</th>
-        </thead>
-        <tbody ng-repeat="employee in employees">
-            <td>{{ employee.name}} </td>
-            <td>{{ employee.gender}} </td>
-            <td>{{ employee.city}} </td>
-            <td ng-hide="hideSalary">{{ employee.salary}} </td>
-        </tbody>
-    </table>
-
-    <br/><br/>
-
-    <!--- attempt to display one genre -->
-
-    <button class="button" ng-click="sortComedy(genre)" ng-model="sortComedy">
-        show comedy movies
+    <button ng-repeat= "genre in genreCards" class="button" ng-click="showGenreMovies(genre.name)"> <!-- show buttons of genre possibilities and sort on click -->
+        show {{genre.name}} movies
     </button>
-    <br/><br/>
-    <div class="genreSorter" ng-repeat= "genre in genreCards" ng-show="sortComedy(genre)">
-        <p>{{genre.genre}}</p>
-    </div>
-
 </div>
 
 
