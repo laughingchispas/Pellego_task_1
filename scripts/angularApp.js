@@ -32,16 +32,16 @@ myApp.controller('CardController', function($scope) {
 
 //movie card content
     $scope.movieCards = [
-            {title: 'Casablanca', director: 'Curtiz', genre: ['drama', 'adventure']},
-            {title: 'Citizen Kane', director: 'Welles', genre: ['adventure']},
-            {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
-            {title: 'Godfather', director: 'Coppola', genre: ['comedy']},
-            {title: 'Back to the Future', director: 'Zemeckis', genre: ['science fiction']},
-            {title: 'Casablanca', director: 'Curtiz', genre: ['drama']},
-            {title: 'Citizen Kane', director: 'Welles', genre: ['drama']},
-            {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
-            {title: 'Godfather', director: 'Coppola', genre: ['drama']},
-            {title: 'Back to the Future', director: 'Zemeckis', genre: ['drama']}
+            {title: 'Casablanca', director: 'Curtiz', genre: [name: 'drama', name: 'adventure']},
+            {title: 'Citizen Kane', director: 'Welles', genre: [name: 'adventure']},
+            {title: 'Psycho', director: 'Hitchcock', genre: [name: 'horror']},
+            {title: 'Godfather', director: 'Coppola', genre: [name: 'comedy']},
+            {title: 'Back to the Future', director: 'Zemeckis', genre: [name: 'science fiction']},
+            {title: 'Casablanca', director: 'Curtiz', genre: [name: 'drama']},
+            {title: 'Citizen Kane', director: 'Welles', genre: [name: 'drama']},
+            {title: 'Psycho', director: 'Hitchcock', genre: [name: 'horror']},
+            {title: 'Godfather', director: 'Coppola', genre: [name: 'drama']},
+            {title: 'Back to the Future', director: 'Zemeckis', genre: [name: 'drama']}
     ];
 
 
