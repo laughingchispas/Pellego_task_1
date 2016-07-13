@@ -45,7 +45,7 @@ myApp.controller('CardController', function($scope) {
     ];
 
 
-// hide all movie cards
+// show all movie cards
     $scope.showAllMovies = function() {
         angular.forEach($scope.movieCards, function(movie) {  //shuffle through all the .movieCards
         movie.hidden = false;  //**movie variable just for inside this function
@@ -76,7 +76,7 @@ myApp.controller('CardController', function($scope) {
 //!!! now that strings have been turned into arrays - this function no longer works!
     $scope.showGenreMovies = function(genre_name) {      //genre_name is a variable within this function
         angular.forEach($scope.movieCards, function(movie) {   //loops through movieCards, movie is also a var. in this function
-                    if (movie.genre === genre_name){    //checking if the the string is the same as the genre name
+                    if (movie.genre.name === genre_name){    //checking if the the string is the same as the genre name
                        movie.hidden = false;   //hide becomes false if they are the same
                     }
                     else {
@@ -84,6 +84,68 @@ myApp.controller('CardController', function($scope) {
                     }
                 })
     };
+
+
+        var list = ['a','b','c'];
+        var apple = list.indexOf('a'); // 0
+        list.indexOf('c'); // 2
+        list.indexOf('d'); // -1
+
+        console.log(apple + 1);
+
+
+        $scope.movieTrialCards = movie
+
+        var movie =     [
+                    {title: 'Casablanca', director: 'Curtiz', genre: ['drama', 'adventure']},
+                    {title: 'Citizen Kane', director: 'Welles', genre: ['adventure']},
+                    {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
+                    {title: 'Godfather', director: 'Coppola', genre: ['comedy']},
+                    {title: 'Back to the Future', director: 'Zemeckis', genre: ['science fiction']},
+                    {title: 'Casablanca', director: 'Curtiz', genre: ['drama']},
+                    {title: 'Citizen Kane', director: 'Welles', genre: ['drama']},
+                    {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
+                    {title: 'Godfather', director: 'Coppola', genre: ['drama']},
+                    {title: 'Back to the Future', director: 'Zemeckis', genre: ['drama']}
+            ];
+
+
+        var genreVar = ['drama','adventure', 'horror','comedy','science fiction'];
+
+        function sortGenre() {
+
+                console.log("we're inside the function"); //check spot
+
+
+                for (var i = 0; i < genreVar.length; i++) {
+                    if (genreVar[i] === 'drama') {
+                        alert('drama');
+                    }
+                    else if (genreVar[i] === 'adventure') {
+                        alert('adventure');
+                    }
+                    else if (genreVar[i] === 'horror') {
+                        alert('horror');
+                                        }
+                    else if (genreVar[i] === 'comedy') {
+                        alert('comedy');
+                                        }
+                   else if (genreVar[i] === 'adventure') {
+                       alert('adventure');
+                                       }
+                     else {
+                        alert('nope');
+                                }
+                }
+
+
+                angular.forEach(movie, function() {
+                   console.log (movie.director);
+            })
+        };
+
+        console.log("end test");  // check spot
+        sortGenre();
 
 
     });
