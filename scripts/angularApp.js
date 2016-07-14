@@ -84,19 +84,20 @@ myApp.controller('CardController', function($scope) {
 
 
     $scope.showGenreMovies = function(genre_name) {      //genre_name is a variable within this function
-            angular.forEach($scope.movieCards, function(movieTrial) {   //loops through movieCards, movie is also a var. in this function
-                        for(var i=0; i<movieTrial.genre.length;i++) {
-                                if (movieTrial.genre[i] === genre_name){    //checking if the the string is the same as the genre name
-                                       movieTrial.hidden = false;   //hide becomes false if they are the same
-                                    }
-                                else {
-                                    //movieTrial.hidden = false;  //hide is true if they are different
-                                    console.log(movieTrial.genre[i])
-                                }
-                        }
+        angular.forEach($scope.movieCards, function(movieTrial) {   //loops through movieCards, movie is also a var. in this function
+            for(var i = 0, gLength = movieTrial.genre.length; i < gLength; i++) {
+                if(movieTrial.genre[i] === genre_name){
+                    movieTrial.hidden = false;
+                    break;
+                }
 
-                    })
-        };
+                if(i === gLength - 1){
+                    movieTrial.hidden = true;
+                }
+            }
+
+        })
+    };
 
 
 
