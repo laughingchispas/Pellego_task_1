@@ -32,7 +32,7 @@ myApp.controller('CardController', function($scope) {
 //movie card content
     $scope.movieCards = [
             {title: 'Casablanca', director: 'Curtiz', genre: ['drama', 'adventure']},
-            {title: 'Citizen Kane', director: 'Welles', genre: ['adventure']},
+            {title: 'Citizen Kane', director: 'Welles', genre: ['adventure', 'science fiction']},
             {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
             {title: 'Godfather', director: 'Coppola', genre: ['comedy']},
             {title: 'Back to the Future', director: 'Zemeckis', genre: ['science fiction']},
@@ -84,19 +84,19 @@ myApp.controller('CardController', function($scope) {
 
 
     $scope.showGenreMovies = function(genre_name) {      //genre_name is a variable within this function
-            angular.forEach($scope.movieCards, function(movieTrial) {   //loops through movieCards, movie is also a var. in this function
-                        for(var i=0; i<movieTrial.genre.length;i++) {
-                                if (movieTrial.genre[i] === genre_name){    //checking if the the string is the same as the genre name
-                                       movieTrial.hidden = false;   //hide becomes false if they are the same
-                                    }
-                                else {
-                                    //movieTrial.hidden = false;  //hide is true if they are different
-                                    console.log(movieTrial.genre[i])
-                                }
-                        }
+        angular.forEach($scope.movieCards, function(movieTrial) {   //loops through movieCards, movie is also a var. in this function
+            for(var i=0; i < movieTrial.genre.length; i++) {
+                if (movieTrial.genre[i] === genre_name){    //checking if the the string is the same as the genre name
+                       movieTrial.hidden = false;   //hide becomes false if they are the same
+                       break;
+                    }
+                if (i === movieTrial.genre.length - 1){    //checking if the the string is the same as the genre name
+                       movieTrial.hidden = true;   //hide becomes false
+                }
+            }
 
-                    })
-        };
+        }
+        )};
 
 
 
@@ -112,9 +112,9 @@ myApp.controller('CardController', function($scope) {
 
         var movie =     [
                     {title: 'Casablanca', director: 'Curtiz', genre: ['drama', 'adventure']},
-                    {title: 'Citizen Kane', director: 'Welles', genre: ['adventure']},
+                    {title: 'Citizen Kane', director: 'Welles', genre: ['adventure', 'science fiction']},
                     {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
-                    {title: 'Godfather', director: 'Coppola', genre: ['comedy']},
+                    {title: 'Godfather', director: 'Coppola', genre: ['comedy', 'adventure']},
                     {title: 'Back to the Future', director: 'Zemeckis', genre: ['science fiction']},
                     {title: 'Casablanca', director: 'Curtiz', genre: ['drama']},
                     {title: 'Citizen Kane', director: 'Welles', genre: ['drama']},
