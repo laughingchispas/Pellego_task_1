@@ -20,7 +20,6 @@ myApp.controller('CardController', function($scope) {
         };
 
 
-
 //navigation link content
     $scope.navCards = [
                 {page: 'home'},
@@ -44,7 +43,18 @@ myApp.controller('CardController', function($scope) {
             {title: 'Back to the Future', director: 'Zemeckis', genre: ['drama']}
     ];
 
-
+    movieTrial = [
+                {title: 'Casablanca', director: 'Curtiz', genre: ['drama', 'adventure']},
+                {title: 'Citizen Kane', director: 'Welles', genre: ['adventure']},
+                {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
+                {title: 'Godfather', director: 'Coppola', genre: ['comedy']},
+                {title: 'Back to the Future', director: 'Zemeckis', genre: ['science fiction']},
+                {title: 'Casablanca', director: 'Curtiz', genre: ['drama']},
+                {title: 'Citizen Kane', director: 'Welles', genre: ['drama']},
+                {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
+                {title: 'Godfather', director: 'Coppola', genre: ['drama']},
+                {title: 'Back to the Future', director: 'Zemeckis', genre: ['drama']}
+        ];
 
 
 // show all movie cards
@@ -53,7 +63,6 @@ myApp.controller('CardController', function($scope) {
         movie.hidden = false;  //**movie variable just for inside this function
         })
     };
-
 
     $scope.newMovie = {    //empty movie object
     };
@@ -74,18 +83,21 @@ myApp.controller('CardController', function($scope) {
     ];
 
 
-//sorting for strings - only showing genres determined by the button
-//!!! now that strings have been turned into arrays - this function no longer works!
     $scope.showGenreMovies = function(genre_name) {      //genre_name is a variable within this function
-        angular.forEach($scope.movieCards, function(movie) {   //loops through movieCards, movie is also a var. in this function
-                    if (movie.genre.name === genre_name){    //checking if the the string is the same as the genre name
-                       movie.hidden = false;   //hide becomes false if they are the same
-                    }
-                    else {
-                        movie.hidden = true;  //hide is true if they are different
-                    }
-                })
-    };
+            angular.forEach($scope.movieCards, function(movieTrial) {   //loops through movieCards, movie is also a var. in this function
+                        for(var i=0; i<movieTrial.genre.length;i++) {
+                                if (movieTrial.genre[i] === genre_name){    //checking if the the string is the same as the genre name
+                                       movieTrial.hidden = false;   //hide becomes false if they are the same
+                                    }
+                                else {
+                                    //movieTrial.hidden = false;  //hide is true if they are different
+                                    console.log(movieTrial.genre[i])
+                                }
+                        }
+
+                    })
+        };
+
 
 
         var list = ['a','b','c'];
@@ -159,14 +171,13 @@ myApp.controller('CardController', function($scope) {
 
 
 
-                console.log("before angular");
-                angular.forEach($scopeTrial, function() {
-                console.log($scopeTrial[0]);
-                console.log($scopeTrial.genre[1]);  //why wont this work???
-                for (var i = 0; i < $scopeTrial.genre.length; i++) {
-                                    console.log($scopeTrial.genre[i]);
-                                    }
-            });
+angular.forEach($scopeTrial, function(movie) {
+    console.log("Genres for "+movie.title+":");
+    for(var i=0; i<movie.genre.length;i++) {
+        console.log(movie.genre[i]);
+    }
+});
+
 
         };
 
