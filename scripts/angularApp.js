@@ -45,6 +45,8 @@ myApp.controller('CardController', function($scope) {
     ];
 
 
+
+
 // show all movie cards
     $scope.showAllMovies = function() {
         angular.forEach($scope.movieCards, function(movie) {  //shuffle through all the .movieCards
@@ -119,29 +121,53 @@ myApp.controller('CardController', function($scope) {
 
                 for (var i = 0; i < genreVar.length; i++) {
                     if (genreVar[i] === 'drama') {
-                        alert('drama');
+                        console.log('drama');
                     }
                     else if (genreVar[i] === 'adventure') {
-                        alert('adventure');
+                        console.log('adventure');
                     }
                     else if (genreVar[i] === 'horror') {
-                        alert('horror');
+                        console.log('horror');
                                         }
                     else if (genreVar[i] === 'comedy') {
-                        alert('comedy');
+                        console.log('comedy');
                                         }
                    else if (genreVar[i] === 'adventure') {
-                       alert('adventure');
+                       console.log('adventure');
                                        }
                      else {
-                        alert('nope');
+                        console.log('nope');
                                 }
                 }
 
+                console.log (genreVar);
 
-                angular.forEach(movie, function() {
-                   console.log (movie.director);
-            })
+                console.log('in between')
+
+            $scopeTrial =   [
+                              {title: 'Casablanca', director: 'Curtiz', genre: ['drama', 'adventure']},
+                              {title: 'Citizen Kane', director: 'Welles', genre: ['adventure']},
+                              {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
+                              {title: 'Godfather', director: 'Coppola', genre: ['comedy']},
+                              {title: 'Back to the Future', director: 'Zemeckis', genre: ['science fiction']},
+                              {title: 'Casablanca', director: 'Curtiz', genre: ['drama']},
+                              {title: 'Citizen Kane', director: 'Welles', genre: ['drama']},
+                              {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
+                              {title: 'Godfather', director: 'Coppola', genre: ['drama']},
+                              {title: 'Back to the Future', director: 'Zemeckis', genre: ['drama']}
+                      ];
+
+
+
+                console.log("before angular");
+                angular.forEach($scopeTrial, function() {
+                console.log($scopeTrial[0]);
+                console.log($scopeTrial.genre[1]);  //why wont this work???
+                for (var i = 0; i < $scopeTrial.genre.length; i++) {
+                                    console.log($scopeTrial.genre[i]);
+                                    }
+            });
+
         };
 
         console.log("end test");  // check spot
