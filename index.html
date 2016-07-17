@@ -35,7 +35,7 @@
     <div id="card" class="item" ng-repeat="card in movieCards | orderBy: sorting" ng-hide="card.hidden">
         <div class="inner_item">
             <div class="movie_content">
-                <p>Movie {{ $index + 1}} : {{card.title}}</p>
+                <p>Movie {{$index + 1}} : {{card.title}}</p>
                 <p class="director">Director: {{card.director}}</p>
                 <p>Genre(s):</p><p ng-repeat="innerCard in card.genre"> {{innerCard}} </p>
             </div>

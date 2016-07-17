@@ -8,10 +8,10 @@ myApp.controller('CardController', function($scope) {
         $scope.sorting = anyName
         };
 
+                //what is this????????????
+                //IS THIS EVEN NECESSARY? I don't see how it links
+                //into the previous function...so it makes no sense to me.
 
-                                                    //what is this????????????
-                                                    //IS THIS EVEN NECESSARY? I don't see how it links
-                                                    //into the previous function...so it makes no sense to me.
     // $scope.addForm = function(otherName) {
               //  $scope.sorting = otherName
                 //};
@@ -27,11 +27,6 @@ myApp.controller('CardController', function($scope) {
     ];
 
 //movie card content
-
-
-
-
-//USE VARIABLE TO REPLACE movieCards CONTENT - two things once = no
     $scope.movieCards = [
             {title: 'Casablanca', director: 'Curtiz', genre: ['drama', 'adventure']},
             {title: 'Citizen Kane', director: 'Welles', genre: ['adventure', 'science fiction']},
@@ -44,22 +39,6 @@ myApp.controller('CardController', function($scope) {
             {title: 'Godfather', director: 'Coppola', genre: ['drama']},
             {title: 'Back to the Future', director: 'Zemeckis', genre: ['drama']}
     ];
-
-
-//is this even still necessary? *** QUESTION!!! *** because the function for showing only certain genres STILL WORKS.
-    movie = [
-                {title: 'Casablanca', director: 'Curtiz', genre: ['drama', 'adventure']},
-                {title: 'Citizen Kane', director: 'Welles', genre: ['adventure']},
-                {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
-                {title: 'Godfather', director: 'Coppola', genre: ['comedy']},
-                {title: 'Back to the Future', director: 'Zemeckis', genre: ['science fiction']},
-                {title: 'Casablanca', director: 'Curtiz', genre: ['drama']},
-                {title: 'Citizen Kane', director: 'Welles', genre: ['drama']},
-                {title: 'Psycho', director: 'Hitchcock', genre: ['horror']},
-                {title: 'Godfather', director: 'Coppola', genre: ['drama']},
-                {title: 'Back to the Future', director: 'Zemeckis', genre: ['drama']}
-    ];
-
 
 //creating a new movie card
     $scope.newMovie = {};    //empty movie object
