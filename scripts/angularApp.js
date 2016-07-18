@@ -5,6 +5,7 @@ myApp.controller('CardController', function($scope) {
 
 //sorting function
     /**
+     * Honk honk! The electric castle boat is on the move!
      * This comment is a continuation of my response on line 108 in index.html. Start there before reading!
      *
      * $scope.sortBy is a function that does one single thing: changes your current sort parameter. It's an event handler
@@ -14,7 +15,7 @@ myApp.controller('CardController', function($scope) {
      *
      * All that happens is it changes your $scope.sorting to the new value that is passed in by the caller. Angular does
      * its fancy magic when scope properties change, and performs 'change detection'. If $scope.sorting has changed, after
-     * re-sorting your data model since the sort parameter has changed, and updating your view accordingly.
+     * re-sorting your data model, it updates your view accordingly.
      *
      * Basically, in response to the question:
      * "how it connects to the form function and then how it connects in the correct scope to the movieCards"

@@ -37,10 +37,10 @@
     If you didn't already notice, this comment shouldn't be read first. Start on line 108 of this file.
     Here it is: the magical line that sorts your data model. ng-repeat has a syntax that allows you to not only repeat
     a DOM structure for every single item in an iterable (remember iterables are things like objects or arrays
-    that you could iterate over in code using "for" loops), but there are some more advanced things you can have it do
-    *right before* it spits all that data out -- you can run filters! Check out the Angular docs for more on filters,
-    but you can get the gist of it here -- moving away from the standard ng-repeat="someItem in someIterable" syntax,
-    there's this new "| orderBy: sorting" thing at the end of the expression.
+    that you could iterate over in code using "for" loops), but there are some more advanced things you can have it do.
+    For instance, *right before* it spits all that data out, you can run filters! Check out the Angular docs for more on
+    filters, but you can get the gist of it here -- moving away from the standard ng-repeat="someItem in someIterable"
+    syntax, there's this new "| orderBy: sorting" thing at the end of the expression.
     orderBy does exactly what it sounds like - it will sort the iterable item by the property you give it, assuming that
     every item in the iterable has that property.
     So, in this case, angular reads your ng-repeat expression *from right to left*, like this:
@@ -105,11 +105,12 @@
 
 <!--- I don't understand how this works --- how it connects to the form function and then how it connects in the correct scope to the movieCards-->
     <!--
-    ng-click is an *event handler*. Angular automatically attaches a click even listener to whatever element has an ng-click
+    Tweet tweet! The birds of the electric castle are calling!
+    ng-click is an *event handler*. Angular automatically attaches a click event listener to whatever element has an ng-click
     attribute on it. An event listener is a specific object that, once it detects the event it is assigned to listen to, calls
      its 'handler' function. In this case, ng-click will call the sortBy function on your parent scope, passing it the string
      that is hard-coded (i.e. 'director', 'title', or 'genre') that is in the markup here.
-     Now, go to the sortBy function for further explanation.
+     Now, go to the sortBy function in your main app controller for further explanation.
     -->
     <div>
         <h2 class="title"> sort by genre </h2>
