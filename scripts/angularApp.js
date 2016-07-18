@@ -5,7 +5,7 @@ myApp.controller('CardController', function($scope) {
 
 //sorting function
     /**
-     * This comment is a continuation of my response on line 90 in index.html. Start there before reading!
+     * This comment is a continuation of my response on line 108 in index.html. Start there before reading!
      *
      * $scope.sortBy is a function that does one single thing: changes your current sort parameter. It's an event handler
      * function, because it is called by ng-click listeners that are attached to buttons in the DOM. It could also be used
