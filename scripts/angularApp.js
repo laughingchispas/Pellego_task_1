@@ -4,6 +4,33 @@ var myApp = angular.module('angularApp', []);
 myApp.controller('CardController', function($scope) {
 
 //sorting function
+    /**
+     * This comment is a continuation of my response on line 90 in index.html. Start there before reading!
+     *
+     * $scope.sortBy is a function that does one single thing: changes your current sort parameter. It's an event handler
+     * function, because it is called by ng-click listeners that are attached to buttons in the DOM. It could also be used
+     * (as you know) by calling it from other functions in the controller (in that context, it wouldn't be considered an
+     * event handler).
+     *
+     * All that happens is it changes your $scope.sorting to the new value that is passed in by the caller. Angular does
+     * its fancy magic when scope properties change, and performs 'change detection'. If $scope.sorting has changed, after
+     * re-sorting your data model since the sort parameter has changed, and updating your view accordingly.
+     *
+     * Basically, in response to the question:
+     * "how it connects to the form function and then how it connects in the correct scope to the movieCards"
+     *
+     * Your buttons are *not* connected in any way to your data model. All they do is tell your controller something.
+     * They simply call a function and tell it to change the sort paramater. The rest of your controller logic updates
+     * the sort on the model because of that change (thanks to angular's change detection), and because of your new model
+     * changes, angular detects those and updates your view (view === HTML) accordingly.
+     *
+     * How does it know to update your view accordingly, you ask? Where the *hell* is the code that's magically sorting
+     * my view, you say, in bewilderment and frustration?
+     *
+     * Quick, go to line 35 in index.html for more!
+     *
+     * :o)
+     */
     $scope.sortBy = function(anyName) {
         $scope.sorting = anyName
         };
